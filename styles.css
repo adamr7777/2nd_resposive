@@ -1,3 +1,8 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -35,10 +40,20 @@ p {
     margin-bottom: 0.5em;
 }
 
-fine-print {
+.fine-print {
     font-size: 0.75rem;
     letter-spacing: 1px;
     color: #858585;
+}
+
+.top-text {
+    display: inline-block;
+    order: -1;
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    margin: 0 auto 0;
 }
 
 .beta-text, 
@@ -57,17 +72,23 @@ fine-print {
     padding-left: 2em;
 }
 
+.main-content p, 
+form {
+    max-width: 450px;
+}
+
 
 .intro { 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     min-height: 250px;
     color: #fff;
     background-color: #9480e4;
     background-image: url('images/intro-bg.png');
     background-size: cover;
+    padding-bottom: 1.5em;
 }
 
 
@@ -123,18 +144,23 @@ input:focus {
 .btn {
     width: 100%;
     font-family: inherit;
-    color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 5px;
     border: none;
-    background-color: #8a71ec;
     padding: 1em 0;
+    
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #8a71ec;
     margin-top: 1em;
 }
 
-.btn:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #b7a7f6;
     cursor: pointer;
 }
